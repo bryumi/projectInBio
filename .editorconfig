@@ -1,0 +1,23 @@
+
+root = true
+
+# Definir para todos os arquivos
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Configurações para arquivos JavaScript/TypeScript
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+
+# Configurações para arquivos JSON
+[*.json]
+indent_size = 2
+
+# Configurações para arquivos Markdown
+[*.md]
+trim_trailing_whitespace = false
