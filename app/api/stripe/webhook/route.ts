@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     const signature = req.headers.get("stripe-signature");
     const secret = process.env.STRIPE_WEBHOOK_SECRET;
     if (!signature || !secret) {
-      return new Error("Stripe webhook secret is not set");
+      return new NextResponse("Stripe webhook secret is not set", { status: 400 });
     }
     const event = stripe.webhooks.constructEvent(body, signature, secret);
     switch (event.type) {
