@@ -32,7 +32,6 @@ export async function createProject(formData: FormData) {
         imagePath,
         createdAt: Timestamp.now().toMillis(),
       });
-      console.log('success')
     return true;
   } catch (error) {
     console.error(error);

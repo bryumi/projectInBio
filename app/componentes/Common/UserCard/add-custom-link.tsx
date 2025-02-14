@@ -41,7 +41,6 @@ export default function AddCustomLink() {
     });
   };
   const onSubmit: SubmitHandler<ICustomLinkSchema> = (data) => {
-    console.log(data);
     handleSaveCustomLinks(data);
   }
   return (

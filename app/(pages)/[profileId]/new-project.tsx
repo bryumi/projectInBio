@@ -57,7 +57,6 @@ export default function NewProject({ profileId }: { profileId: string }) {
     });
   }
   const onSubmit:SubmitHandler<ICreateProjectSchema> = async (data) => {
-    console.log(data)
     handleCreateProject(data)
   }
   return (
