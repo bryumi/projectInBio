@@ -3,17 +3,25 @@ import TotalVisits from "../Common/TotalVisits"
 import UserCard from "../Common/UserCard/UserCard"
 import CreateNow from "../ui/CreateNow"
 
-export default function Hero() {
+export default function Hero({
+  texts,
+}: {
+  texts?: {
+    title: string;
+    description: string;
+  };
+}) {
   return (
     <div className="flex h-screen">
     <div className="mt-[35vh] flex w-full flex-col gap-2">
       <h1 className="text-5xl font-bold leading-[64px] text-white">
-        Seus projetos e redes sociais em um único link
+      {texts?.title || "Seus projetos e redes sociais em um único link"}
       </h1>
       <h2 className="text-xl leading-6">
-        Crie sua própria página de projetos e compartilhe eles com o mundo.
-          <br />
-          Acompanhe o engajamento com Analytics de cliques
+      {texts?.description ||
+            "Crie sua própria página de projetos e compartilhe eles com mundo."}
+             <br />
+             Acompanhe o engajamento com Analytics de cliques
         </h2>
         <CreateNow />
       </div>
