@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Red_Hat_Display } from 'next/font/google'
 
 const redHatDisplay = Red_Hat_Display({
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${redHatDisplay.className} bg-background-primary text-content-body antialiased`}
       >
         {children}
+        <GoogleAnalytics gaId="G-XYZ" />
       </body>
     </html>
   );
